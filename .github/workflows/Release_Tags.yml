@@ -2,13 +2,18 @@ name: Release_Tags
 on:
   push:
     tags:
-      - "v*"  #on every tag created
+      - "v*"
 
 env:
   service_name: expense-frontend
 
+
 jobs:
   CI_Steps:
     uses: jyothsna-shrey/github-actions/.github/workflows/Release_Tags.yml@main
+    secrets: inherit
+    with:
+      service_name: expense-frontend
+
 
 

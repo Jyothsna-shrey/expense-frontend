@@ -1,4 +1,3 @@
-
 name: Developer_Pull_Request
 on:
   pull_request:
@@ -8,6 +7,10 @@ on:
 env:
   service_name: expense-frontend
 
+
 jobs:
   CI_Steps:
     uses: jyothsna-shrey/github-actions/.github/workflows/Developer_Pull_Request.yml@main
+    secrets: inherit
+    with:
+      service_name: expense-frontend
