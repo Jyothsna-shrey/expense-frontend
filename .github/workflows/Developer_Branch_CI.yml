@@ -1,8 +1,13 @@
 name: Developer_Branch_CI
 on:
-    push:
-      branches:
-        - 'XPNS-*'
+ push:
+  branches:
+    - 'XPNS-*'
+
+env:
+  service_name: expense-frontend
+
+
 jobs:
   CI_Steps:
     uses: jyothsna-shrey/github-actions/.github/workflows/Developer_Branch_CI.yml@main
